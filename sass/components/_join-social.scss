@@ -1,0 +1,41 @@
+.join {
+    margin-left: 70px;
+}
+
+
+.join__title {
+    @include font(inherit,400,14px,16px,0.03em);
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    margin-bottom: 20px;
+}
+
+.join-list {
+    display: flex;
+}
+
+.join-list__item {
+    width: 44px;
+    height: 44px;
+
+    &:not(:first-child) {
+        margin-left: 10px;
+    }
+}
+
+
+
+.join-list__link {
+    transition: background-color 250ms var(--timing-function);
+
+
+    @include icon(100%,100%,50%,#ffffff,rgba(255, 255, 255, 0.1));
+    @include align();
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+}

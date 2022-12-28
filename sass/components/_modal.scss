@@ -1,0 +1,233 @@
+
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    opacity: 1;
+    z-index: 2;
+    transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+}
+
+
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 250ms var(--timing-function);
+
+    min-width: 528px;
+    min-height: 581px;
+
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    @include align();
+}
+
+.modal__icon {
+    transition: fill 250ms var(--timing-function);
+        &:hover,
+        &:focus {
+            fill: var(--accent-color);
+        }
+}
+
+
+
+.modal__direction {
+    @include font(inherit,700,20px,23px);
+    text-align: center;
+    color: var(--title-color);
+    margin: 0 auto;
+    padding: 40px 40px 12px 40px;
+    display: block;
+}
+
+
+
+.form {
+    width: 100%;
+    /* outline: 2px solid #212121; */
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.form__fieled {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form__label {
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+
+.form__input {
+    transition: border 250ms var(--timing-function);
+
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    padding-left: 40px;
+    padding-right: 15px;
+        &:focus {
+            border: 1px solid var(--accent-color);
+        }
+}
+
+
+
+
+
+.form__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+        .form__input:focus + & {
+            fill: var(--accent-color);
+        }
+}
+
+/* .wrapper{
+    position: relative;
+    display: block;
+} */
+
+
+.form__comment {
+    transition: border 250ms var(--timing-function);
+
+    padding: 12px 16px;
+    height: 120px;
+    resize: none;
+
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+        &:focus {
+            border: 1px solid var(--accent-color);
+        }
+}
+
+
+
+/* .checkbox--visually-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+} */
+
+.clause {
+    @include align();
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    
+
+
+    font-size: 14px;
+    line-height: calc(24/14);
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+}
+
+.clause__border {
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    border: 2px solid #212121;
+    margin-right: 8px;
+
+    @include align();
+}
+
+.checkbox:checked + .clause__border{
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.checkbox__visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: -1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+
+.clause__link {
+    text-decoration-line: underline;
+    color: var(--accent-color);
+}
+
+
+
+
+.form__btn-modal {
+
+    padding: 10px 55px;
+    margin: 0 auto;
+
+    min-width: 200px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30/16);
+
+    cursor: pointer;
+
+    letter-spacing: 0.06em;
+
+    color: #FFFFFF;
+
+    display: block;
+    border-color: transparent;
+
+    background-color: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+}

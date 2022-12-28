@@ -1,0 +1,21 @@
+.contact {
+    font-style: inherit;
+}
+
+.contact-list__item {
+    line-height: 1.71;
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+
+
+.contact-list__link {
+    color: var(--footer-text-color);
+}
+
+.contact-list__link--address {
+    color: #ffffff;
+}

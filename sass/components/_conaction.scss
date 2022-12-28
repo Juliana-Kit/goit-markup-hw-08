@@ -1,0 +1,53 @@
+.conection {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+
+.conection__item {
+    display: block;
+    align-items: center;
+    justify-content: center;
+        &:not(:first-child) {
+            margin-left: 50px;
+    
+        }
+}
+
+
+.conection__icon {
+    margin-right: 10px;
+    fill: currentColor;
+        &:hover,
+        &:focus {
+            fill: var(--accent-color);
+        }
+}
+
+
+
+
+.conection__link {
+    /* transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+    transition: color 250ms var(--timing-function);
+
+    margin-left: 10px;
+    padding: 32px 0;
+
+    color: #757575;
+
+    @include font(inherit,500,14px,16px,0.02em);
+    @include align();
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+}
+
