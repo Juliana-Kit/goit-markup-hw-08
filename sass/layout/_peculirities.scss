@@ -1,3 +1,5 @@
+
+
 .peculirities {
     padding: 94px 0;
     /* background-color:teal; */
@@ -20,11 +22,33 @@
     flex-wrap: wrap;
 
     justify-content: space-between;
+
+    @media screen and (min-width:768px){
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: -15px;
+    }
+
+    @media screen and (min-width:1600px){
+        
+    }
 }
 
 
 .peculirities-list__item{
     flex-basis: calc((100% - 90px) / 4);
+
+    @media screen and (min-width:768px){
+        flex-basis: calc((100% - 4 * 15px) /2);
+        margin: 15px;
+    }
+
+    &:not(last-child){
+        @media screen and (max-width:767px){
+           margin-bottom: 30px; 
+        }
+    }
 }
 
 .peculirities-list__content-icon{
